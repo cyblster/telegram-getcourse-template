@@ -13,7 +13,7 @@ def mysql_query(query_string):
     return mysql_cursor.fetchall() or []
 
 
-conf = config.DevelopmentConfig # Текущий конфиг
+conf = config.DevelopmentConfig  # Текущий конфиг
 
 app = Flask(__name__)
 
