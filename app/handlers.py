@@ -8,7 +8,7 @@ def message_start(message):
     bot.send_message(chat_id=message.chat.id, text=conf.BOT_REPLY['GREETING'])
 
 
-@bot.message_handler(regexp='([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+', chat_types='private')
+@bot.message_handler(regexp='^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', chat_types='private')
 def message_email(message):
     email = message.text.lower()
     telegram_username = message.from_user.username
