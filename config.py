@@ -3,7 +3,7 @@ import os
 
 class BaseConfig:
     APP_KEY = os.getenv('APP_KEY')
-    BOT_KEY = os.getenv('BOT_TOKEN')
+    BOT_KEY = os.getenv('BOT_KEY')
     MYSQL_PASSWD = os.getenv('MYSQL_PASSWD')
 
     BOT_REPLY = {
