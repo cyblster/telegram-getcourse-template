@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 bot = TeleBot(conf.BOT_KEY)
 
-mysql = Connection(conf.MYSQL_HOST, conf.MYSQL_USER, conf.MYSQL_PASSWD, conf.MYSQL_DB, autocommit=True)
+mysql = Connection(host=conf.MYSQL_HOST, user=conf.MYSQL_USER, passwd=conf.MYSQL_PASSWD, db=conf.MYSQL_DB, autocommit=True)
 
 from . import views
 from . import handlers
