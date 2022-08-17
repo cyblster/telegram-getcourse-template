@@ -14,7 +14,7 @@ def webhook_update():
 
 
 # API приложения
-@app.route(rule=f'{conf.APP_KEY}/customer_add', methods=['GET'])
+@app.route(rule=f'/{conf.APP_KEY}/customer_add', methods=['GET'])
 def customer_add():
     payment_id = request.args.get('payment_link').split('/')[-1]
     payment_rate = request.args.get('payment_rate').lower()
@@ -25,7 +25,7 @@ def customer_add():
     return '', 200
 
 
-@app.route(rule=f'{conf.APP_KEY}/customer_remove', methods=['GET'])
+@app.route(rule=f'/{conf.APP_KEY}/customer_remove', methods=['GET'])
 def customer_remove():
     payment_id = request.args.get('payment_link').split('/')[-1]
 
